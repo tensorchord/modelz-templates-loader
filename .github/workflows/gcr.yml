@@ -30,12 +30,12 @@ jobs:
     strategy:
       matrix:
         image:
-          - source: registry.hf.space/project-baize-baize-7b:latest
-            target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/project-baize-baize-7b:${{ github.event.release.tag_name }}
-          - source: registry.hf.space/microsoft-hugginggpt:gpu-fec6c4b
-            target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/microsoft-hugginggpt:${{ github.event.release.tag_name }}
-          - source: registry.hf.space/stabilityai-stablelm-tuned-alpha-chat:latest
-            target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/stabilityai-stablelm-tuned-alpha-chat:${{ github.event.release.tag_name }}
+          # - source: registry.hf.space/project-baize-baize-7b:latest
+          #   target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/project-baize-baize-7b:${{ github.event.release.tag_name }}
+          # - source: registry.hf.space/microsoft-hugginggpt:gpu-fec6c4b
+          #   target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/microsoft-hugginggpt:${{ github.event.release.tag_name }}
+          # - source: registry.hf.space/stabilityai-stablelm-tuned-alpha-chat:latest
+          #   target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/stabilityai-stablelm-tuned-alpha-chat:${{ github.event.release.tag_name }}
           - source: modelzai/gradio-stable-diffusion:23.03
             target: us-central1-docker.pkg.dev/nth-guide-378813/modelzai/gradio-stable-diffusion:${{ github.event.release.tag_name }}
     runs-on: ubuntu-latest
