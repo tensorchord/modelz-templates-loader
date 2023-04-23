@@ -54,7 +54,11 @@ jobs:
           username: ${{ secrets.GCR_USERNAME }}
           password: ${{ secrets.GCR_TOKEN }}
 
-      - name: Push Image
+      - name: Pull Image
+        run: |
+          docker pull ${{ matrix.image.source }}
+
+      - name: Retag and Push Image
         uses: contiamo/retag-push@main
         with:
           source: ${{ matrix.image.source }}
